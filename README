@@ -1,15 +1,15 @@
 Métodos en Javascript para recorrer un Array.
 
-- Método .forEach
+- Método .forEach()
 
-    .forEach es un método de las arrays de JavaScript que se utiliza para iterar sobre los elementos de un array y 
-  ejecutar una función determinada en cada uno de ellos. A diferencia del bucle for , forEach no tiene un contador
-  y no permite la interrupción o el salto de iteración.
+.forEach es un método de las arrays de JavaScript que se utiliza para iterar sobre los elementos de un array y 
+ejecutar una función determinada en cada uno de ellos. A diferencia del bucle for , forEach no tiene un contador
+y no permite la interrupción o el salto de iteración.
 
 
 Ejemplo comparativo con for loop:
 
-Ej: (for loop):                                                                Ej: (.forEach):
+Ej: (for):                                                                     Ej: (.forEach):
 
 const numeros = [1, 2, 3, 4, 5];                                               const numbers = [65, 44, 12, 4];
                                                                                numbers.forEach(myFunction)
@@ -17,14 +17,44 @@ for(let i = 0; i < numeros.length; i++) {
       console.log(numeros[i]);                                                 function myFunction(item, index, arr) {
 }                                                                              arr[index] = item * 10;
                                                                                }
-   
 
+- Método .reduce()
 
+.reduce() es un método que ejecuta una función reductora sobre cada elemento de un array, devolviendo como resultado un único valor.
 
+Ejemplo .reduce():
 
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((acc, cur) => acc + cur, 0);
+console.log(sum); // 15
 
+- Método .filter()
 
-  
+.filter() es otro método de JavaScript muy útil para filtrar elementos de un arreglo en base a ciertas condiciones.
+Funciona recorriendo cada elemento del arreglo y aplicando una función de filtro a cada uno.
 
+Ejemplo:
 
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+
+- Método .map()
+
+El método .map() te permite iterar sobre un arreglo y modificar sus elementos utilizando una función callback. La función callback
+se ejecutará entonces en cada uno de los elementos del arreglo. se utiliza comúnmente para aplicar algunos cambios a los elementos, 
+ya sea multiplicando por un número específico o haciendo cualquier otra operación que pueda necesitar para su aplicación.
+
+Ejemplo .map():
+
+let arr = [3, 4, 5, 6];
+
+let modifiedArr = arr.map(function(element){
+    return element *3;
+});
+
+console.log(modifiedArr); // [9, 12, 15, 18]
 
