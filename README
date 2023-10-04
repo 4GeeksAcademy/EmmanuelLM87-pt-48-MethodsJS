@@ -1,14 +1,27 @@
-Método .forEach
- 
+Métodos en Javascript para recorrer un Array.
+
+- Método .forEach
+
+    .forEach es un método de las arrays de JavaScript que se utiliza para iterar sobre los elementos de un array y 
+  ejecutar una función determinada en cada uno de ellos. A diferencia del bucle for , forEach no tiene un contador
+  y no permite la interrupción o el salto de iteración.
 
 
 Ejemplo comparativo con for loop:
 
-
-Ej (for loop):
+Ej: (for loop):
 
 const numeros = [1, 2, 3, 4, 5];
 
     for(let i = 0; i < numeros.length; i++) {
         console.log(numeros[i]);
     }
+
+Ej: (.forEach):
+
+const numbers = [65, 44, 12, 4];
+numbers.forEach(myFunction)
+
+function myFunction(item, index, arr) {
+  arr[index] = item * 10;
+}
