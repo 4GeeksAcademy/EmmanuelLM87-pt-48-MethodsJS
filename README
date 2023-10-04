@@ -9,19 +9,22 @@ Métodos en Javascript para recorrer un Array.
 
 Ejemplo comparativo con for loop:
 
-Ej: (for loop):
+Ej: (for loop):                                                                Ej: (.forEach):
 
-const numeros = [1, 2, 3, 4, 5];
+const numeros = [1, 2, 3, 4, 5];                                               const numbers = [65, 44, 12, 4];
+                                                                               numbers.forEach(myFunction)
+for(let i = 0; i < numeros.length; i++) {
+      console.log(numeros[i]);                                                 function myFunction(item, index, arr) {
+}                                                                              arr[index] = item * 10;
+                                                                               }
+   
 
-    for(let i = 0; i < numeros.length; i++) {
-        console.log(numeros[i]);
-    }
 
-Ej: (.forEach):
 
-const numbers = [65, 44, 12, 4];
-numbers.forEach(myFunction)
 
-function myFunction(item, index, arr) {
-  arr[index] = item * 10;
-}
+
+
+  
+
+
+
